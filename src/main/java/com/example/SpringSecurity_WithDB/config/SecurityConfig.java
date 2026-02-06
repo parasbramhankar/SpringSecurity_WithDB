@@ -55,7 +55,7 @@ public class SecurityConfig {
                          * Spring Security automatically "ROLE_" prefix add karta hai,
                          * isliye hasRole("ADMIN") ka matlab ROLE_ADMIN hota hai.
                          */
-                        req.requestMatchers("/admin")
+                        req.requestMatchers("/adminMethod")
                                 .hasRole("ADMIN")
 
                                 /**
@@ -67,7 +67,7 @@ public class SecurityConfig {
                                  * Agar user ke paas ADMIN ya USER role hai,
                                  * to access mil jayega.
                                  */
-                                .requestMatchers("/user")
+                                .requestMatchers("/userMethod")
                                 .hasAnyRole("ADMIN", "USER")
 
                                 /**
