@@ -41,7 +41,7 @@ public class CustomUserDetailsService implements UserDetailsService {
          * orElseThrow():
          * Agar Optional empty hai, to exception throw hota hai
          */
-        User user = userRepo.findByUserName(username)
+        User user = userRepo.findByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("user not found"));
 
         /**
