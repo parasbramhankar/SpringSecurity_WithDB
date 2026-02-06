@@ -5,17 +5,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
+
     @GetMapping("/")
     public String welcome(){
         return "hello sir, welcome to our office";
     }
 
-    @GetMapping("/user")
+    @GetMapping("/userMethod")
     public String user(){
         return "hello user...";
     }
 
-    @GetMapping("/admin")
+    @GetMapping("/adminMethod")
     public String admin(){
         return "hello admin...";
     }
